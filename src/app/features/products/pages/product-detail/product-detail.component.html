@@ -1,0 +1,95 @@
+<div class="bg-white-light min-h-screen">
+    <app-header></app-header>
+  
+    <div class="max-w-7xl mx-auto px-14 sm:px-16 lg:px-18">
+  
+        <div class="my-12">
+            <app-button
+                icon="←"
+                iconClass="text-blue border-2 border-gold-light rounded-full py-1 px-1.5 mr-3 font-bold text-xl"
+                text="Regresar"
+                url="/products"
+                buttonClass="bg-transparent text-black py-3 px-6 rounded-full text-xl">
+            </app-button>
+        </div>
+    
+        <div class="relative max-w-4xl mx-auto mb-80">
+            <div class="flex justify-center mb-8">
+                <img src="images/pig-banner.png" alt="Banner Cuenta YA" class="max-w-full h-auto" />
+            </div>
+    
+            <div class="mb-8">
+                <p class="text-blue-light text-lg mb-2 font-semibold">Cuenta YA</p>
+                <h1 class="text-blue text-4xl md:text-5xl font-bold mb-2">Tu cuenta para todo</h1>
+                <p class="text-gray text-lg">
+                    ¡Ábrela y utilízala para lo que quieras! Sin comisión* y sin monto de apertura.
+                </p>
+            </div>
+    
+            <div class="flex justify-start">
+                <app-button
+                    text="Abrir Cuenta YA"
+                    url="#"
+                    buttonClass="bg-gold text-blue text-lg py-3 px-8 rounded-2xl hover:bg-gold-light">
+                </app-button>
+            </div>
+        </div>
+    
+        <div class="text-center mb-16">
+            <h1 class="text-blue text-3xl md:text-3xl font-bold">Tú eliges la opción que prefieras</h1>
+        </div>
+    
+        <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto mb-80">
+            <app-product-feature
+                imageUrl="images/cuenta-de-ahorro.png"
+                imageAlt="Cuenta de Ahorro"
+                title="Cuenta de Ahorro"
+                [features]="[
+                    'Abre tu Cuenta solo tomará 5 minutos.',
+                    '*Sin comisión por administración de saldos mínimos y sin monto de apertura.',
+                    'Accede a tu Cuenta en cualquier lugar desde tu Banca Digital o App.'
+                ]"
+                buttonText="Abrir Cuenta de Ahorro"
+                buttonUrl="#">
+            </app-product-feature>
+    
+            <app-product-feature
+                imageUrl="images/recibir-tu-salario.png"
+                imageAlt="Cuenta para recibir tu salario"
+                title="Cuenta para recibir tu salario"
+                [features]="[
+                    'Abre tu Cuenta de manera fácil y rápida.',
+                    'Solo necesitas tu carta de empleo y que tu lugar de trabajo esté asociado con nosotros.',
+                    'Obtén beneficios personalizados según tu empresa.'
+                ]"
+                buttonText="Abrir Cuenta para recibir salario"
+                buttonUrl="#">
+            </app-product-feature>
+        </div>
+    
+        <div class="text-center mb-16">
+            <h1 class="text-blue text-3xl md:text-3xl font-bold">Aclara tus dudas sobre Cuenta YA</h1>
+        </div>
+    
+        <div class="grid grid-cols-1 md:grid-cols-1 gap-12 max-w-6xl mx-auto pb-80">
+            <app-card-large
+                backgroundClass="bg-gold"
+                title="Preguntas frecuentes"
+                description="No te quedes con las dudas sobre tu Cuenta de Ahorro."
+                imageUrl="images/preguntas-frecuentes.png"
+                linkText="Más detalles"
+                linkUrl="#">
+            </app-card-large>
+    
+            <app-card-large
+                backgroundClass="bg-gray-light"
+                title="Tasas y comisiones"
+                description="Consulta todas las tasas y comisiones de tu Cuenta de Ahorro."
+                imageUrl="images/tasas.png"
+                linkText="Ver comisiones"
+                linkUrl="#">
+            </app-card-large>
+        </div>
+    
+    </div>
+</div>

@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@theme {
+    --color-transparent: transparent;
+    --color-current: currentColor;
+    --color-black: black;
+    --color-white: white;
+    --color-white-light: #f8f8f8;
+    --color-gray: #848484;
+    --color-gray-light: #e6e6e6;
+    --color-gold: #ffc600;
+    --color-gold-light: #eac647;
+    --color-blue: #01426a;
+    --color-blue-dark: #002E4A;
+    --color-blue-light: #2c85bc;
+    --color-blue-lighter: #e7eff5;
+    --color-blue-lightest: #f1f9ff;
+}
+
+* {
+    font-family: 'Gotham', sans-serif;                                             
+}

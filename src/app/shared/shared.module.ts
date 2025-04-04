@@ -8,6 +8,7 @@ import { SmallCardComponent } from './components/small-card/small-card.component
 import { ProductFeatureComponent } from './components/product-feature/product-feature.component';
 import { CardLargeComponent } from './components/card-large/card-large.component';
 import { SplashScreenComponent } from './components/splash-screen/splash-screen.component';
+import { RouterModule } from '@angular/router';
 
 const SHARED_COMPONENTS = [
     CardComponent,
@@ -21,7 +22,7 @@ const SHARED_COMPONENTS = [
 // This module is used to declare and export shared components, directives, and pipes
 @NgModule({
     declarations: SHARED_COMPONENTS,
-    imports: [CommonModule],
+    imports: [CommonModule, RouterModule],
     exports: SHARED_COMPONENTS
 })
 export class SharedModule {}

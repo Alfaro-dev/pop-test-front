@@ -22,7 +22,7 @@
 }
 
 .product-feature-list {
-  @apply space-y-8 w-full mb-10 px-10;
+  @apply space-y-8 w-full mb-10 px-12;
 }
 
 .feature-item {

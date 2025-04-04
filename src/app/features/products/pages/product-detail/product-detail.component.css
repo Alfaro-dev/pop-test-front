@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@import "../../../../../styles.css";
+
+.container-wrapper {
+  @apply max-w-7xl mx-auto px-14 sm:px-16 lg:px-18;
+}
+
+.back-button-wrapper {
+  @apply my-12;
+}
+
+.banner-section {
+  @apply relative max-w-4xl mx-auto mb-80;
+}
+
+.image-banner-wrapper {
+  @apply flex justify-center mb-8;
+}
+
+.banner-img {
+  @apply max-w-full h-auto;
+}
+
+.banner-content {
+  @apply mb-4;
+}
+
+.banner-subtitle {
+  @apply text-blue-light text-lg mb-6 font-semibold;
+}
+
+.banner-title {
+  @apply text-blue text-4xl md:text-5xl font-bold mb-6;
+}
+
+.banner-description {
+  @apply text-gray text-lg;
+}
+
+.banner-button-wrapper {
+  @apply flex justify-start;
+}
+
+.section-title {
+  @apply text-center mb-16;
+}
+
+.section-title h1 {
+  @apply text-blue text-3xl md:text-3xl font-bold;
+}
+
+.product-feature-grid {
+  @apply grid md:grid-cols-2 max-w-6xl mx-auto mb-80;
+}
+
+.info-cards-grid {
+  @apply grid grid-cols-1 md:grid-cols-1 gap-12 max-w-6xl mx-auto pb-80;
+}

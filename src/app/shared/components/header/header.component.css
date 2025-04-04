@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@import "../../../../styles.css";
+
+.header-container {
+  @apply flex justify-between items-center py-4 px-6 bg-white;
+}
+
+.logo-wrapper {
+  @apply h-16;
+}
+
+.logo-img {
+  @apply h-full;
+}
+
+.menu-button {
+  @apply w-10 h-10 flex items-center justify-center focus:outline-none;
+}
+
+.menu-icon {
+  @apply w-6 h-5 flex flex-col justify-between;
+}
+
+.menu-line {
+  @apply w-full h-1 bg-blue rounded-full;
+}

@@ -1,21 +1,21 @@
-<div class="flex flex-col items-center text-center">
-    <div class="mb-8 relative">
-      <div class="w-40 h-40 rounded-full bg-blue-lightest flex items-center justify-center">
-        <img [src]="imageUrl" [alt]="imageAlt" class="w-28 h-auto" />
-      </div>
+<div class="product-feature-wrapper">
+    <div class="product-feature-image-wrapper">
+        <div class="product-feature-image-bg">
+            <img [src]="imageUrl" [alt]="imageAlt" class="product-feature-img" />
+        </div>
     </div>
   
-    <h2 class="text-blue text-lg font-semibold mb-8">{{ title }}</h2>
+    <h2 class="product-feature-title">{{ title }}</h2>
   
-    <div class="space-y-8 w-full mb-10 px-10">
-        <div class="flex items-start" *ngFor="let item of features">
-            <div class="flex-shrink-0 mt-1">
+    <div class="product-feature-list">
+        <div class="feature-item" *ngFor="let item of features">
+            <div class="feature-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="#01426a" class="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                </svg>      
+                </svg>
             </div>
-            <div class="ml-4 text-left">
-            <p class="text-gray">{{ item }}</p>
+            <div class="feature-text">
+                <p class="text-gray">{{ item }}</p>
             </div>
         </div>
     </div>
@@ -23,6 +23,6 @@
     <app-button
         [text]="buttonText"
         [url]="buttonUrl"
-        buttonClass="w-full bg-gold hover:bg-gold-light text-blue py-4 px-6 rounded-xl text-lg"
+        buttonClass="w-full bg-gold hover:bg-gold-light text-blue py-4 px-8 rounded-xl text-xl font-semibold"
     ></app-button>
 </div>

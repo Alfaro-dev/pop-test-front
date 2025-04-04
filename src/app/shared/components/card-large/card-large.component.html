@@ -1,20 +1,20 @@
-<div [ngClass]="backgroundClass" class="rounded-2xl p-20">
-    <div class="flex items-center">
-        <div class="flex justify-center items-center mr-10">
-            <img [src]="imageUrl" alt="" class="max-w-full h-auto" />
+<div [ngClass]="backgroundClass" class="card-large-wrapper">
+    <div class="card-large-content">
+        <div class="card-large-image">
+            <img [src]="imageUrl" alt="" class="card-large-img" />
         </div>
     
-        <div class="flex flex-col justify-between h-full">
-            <h2 class="text-blue text-2xl font-bold mb-4">{{ title }}</h2>
-            <p class="text-blue-dark mb-6">{{ description }}</p>
+        <div class="card-large-text">
+            <h2 class="card-large-title">{{ title }}</h2>
+            <p class="card-large-description">{{ description }}</p>
     
-            <a [href]="linkUrl" class="inline-flex items-center text-blue-light hover:text-blue transition-colors">
-            {{ linkText }}
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd"
+            <a [href]="linkUrl" class="card-large-link">
+                {{ linkText }}
+                <svg xmlns="http://www.w3.org/2000/svg" class="card-large-icon" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
                     d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
                     clip-rule="evenodd" />
-            </svg>
+                </svg>
             </a>
         </div>
     </div>

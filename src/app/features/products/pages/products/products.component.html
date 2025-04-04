@@ -1,66 +1,51 @@
 <div class="bg-white-light min-h-screen">
-    <app-header></app-header>
+    <ng-container *ngIf="showSplash; else pageContent">
+        <app-splash-screen></app-splash-screen>
+    </ng-container>
   
-    <div class="max-w-7xl mx-auto px-14 sm:px-16 lg:px-18">
-        <main class="py-6">
-    
-            <section class="mb-16">
-            <div class="mb-10">
-                <p class="text-blue-light text-lg mb-2 font-semibold">Ahorro e Inversión</p>
-                <h1 class="text-blue text-2xl md:text-3xl font-bold mb-2">Encuentra tu solución ideal</h1>
-                <p class="text-gray text-lg">Selecciona el producto que se adapte a tus necesidades.</p>
-            </div>
-    
-            <div class="grid md:grid-cols-2 gap-8">
-                <app-card 
-                    header="Cuenta"
-                    title="!Tu cuenta para todo!"
-                    description="Abre tu Cuenta de Ahorro 100% digital"
-                    imageUrl="images/cuenta-ya.png"
-                    buttonText="Obtener"
-                    buttonLink="/products/1"
-                    buttonClass="bg-gold text-blue text-xl py-3 px-26 rounded-2xl hover:bg-gold-light">
-                </app-card>
-    
-                <app-card 
-                    header="Depósito a Plazo"
-                    title="¡Solicita tu Depósito a Plazo YA en Línea!"
-                    imageUrl="images/deposito-a-plazo-ya.png"
-                    buttonText="Obtener"
-                    buttonLink="/products/2"
-                    buttonClass="bg-gold text-blue text-xl py-3 px-26 rounded-2xl hover:bg-gold-light">
-                </app-card>
-            </div>
-            </section>
-    
-            <section class="mb-16">
-            <h2 class="text-blue text-2xl md:text-3xl font-bold mb-12">También podría interesarte</h2>
-    
-            <div class="grid md:grid-cols-2 gap-16">
-                <app-small-card
-                    containerClass="bg-blue-lighter"
-                    imageUrl="images/tarjetas.png"
-                    imageAlt="Tarjeta de Crédito"
-                    title="Tarjeta de Crédito"
-                    [description]="creditCardDescription"
-                    buttonText="Ver Productos"
-                    buttonClass="border-blue border-3 rounded-2xl py-2 px-6 text-blue hover:bg-blue hover:text-white"
-                    buttonUrl="/products/3">
-                </app-small-card>
-    
-                <app-small-card
-                    containerClass="bg-gold"
-                    imageUrl="images/creditos.png"
-                    imageAlt="Créditos"
-                    title="Créditos"
-                    [description]="loansDescription"
-                    buttonText="Ver Producto"
-                    buttonClass="border-blue border-3 rounded-2xl py-2 px-6 text-blue hover:bg-blue hover:text-white"
-                    buttonUrl="/products/4">
-                </app-small-card>
-            </div>
-            </section>
-    
-        </main>
-    </div>
+    <ng-template #pageContent>
+        <div class="container-wrapper">
+            <main class="py-6">
+                <section class="mb-16">
+                    <div class="section-header">
+                        <p class="section-subtitle">{{ investmentSubtitle }}</p>
+                        <h1 class="section-title">{{ investmentTitle }}</h1>
+                        <p class="section-description">{{ investmentDescription }}</p>
+                    </div>
+        
+                    <div class="card-grid">
+                        <app-card 
+                            *ngFor="let card of mainCards"
+                            [header]="card.header"
+                            [title]="card.title"
+                            [description]="card.description"
+                            [imageUrl]="card.imageUrl"
+                            [buttonText]="card.buttonText"
+                            [buttonUrl]="card.buttonLink"
+                            [buttonClass]="card.buttonClass">
+                        </app-card>
+                    </div>
+                </section>
+        
+                <section class="mb-16">
+                    <h2 class="interest-title">{{ interestTitle }}</h2>
+        
+                    <div class="small-card-grid">
+                        <app-small-card
+                            *ngFor="let card of additionalCards"
+                            [containerClass]="card.containerClass"
+                            [imageUrl]="card.imageUrl"
+                            [imageAlt]="card.imageAlt"
+                            [title]="card.title"
+                            [description]="card.description"
+                            [buttonText]="card.buttonText"
+                            [buttonClass]="card.buttonClass"
+                            [buttonUrl]="card.buttonUrl">
+                        </app-small-card>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </ng-template>
 </div>
+  

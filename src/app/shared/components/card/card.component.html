@@ -1,29 +1,21 @@
-<div class="bg-white rounded-2xl shadow-sm p-8 text-center pb-12">
-    <div class="mt-12 h-60 py-12 flex items-end">
-        <img
-            [src]="imageUrl"
-            [alt]="imageAlt"
-            class="mx-auto max-w-full h-auto"
-        />
+<div class="card-container">
+    <div class="image-wrapper">
+        <img [src]="imageUrl" [alt]="imageAlt" class="card-image" />
     </div>
-
-    <h2 class="text-blue text-2xl font-extrabold mb-4">
+  
+    <h2 class="card-header">
         {{ header }}
-        <span
-            class="bg-gold text-blue px-2 py-2 rounded-full text-1xl"
-        >
-            YA
-        </span>
+        <span class="card-header-badge">YA</span>
     </h2>
-
-    <div class="h-30 flex justify-center items-center flex-col">
-        <p class="text-lg text-gray mb-1">{{ title }}</p>
-        <p class="text-lg text-gray mb-6">{{ description }}</p>
+  
+    <div class="card-content">
+        <p class="card-title">{{ title }}</p>
+        <p class="card-description">{{ description }}</p>
     </div>
-
+  
     <app-button
-        [text]="buttonText"
-        [url]="buttonUrl"
-        [buttonClass]="buttonClass"
+      [text]="buttonText"
+      [url]="buttonUrl"
+      [buttonClass]="buttonClass"
     ></app-button>
 </div>

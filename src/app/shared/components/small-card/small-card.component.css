@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import "../../../../styles.css";
+
+.small-card-wrapper {
+  @apply rounded-2xl shadow-none p-8 h-100;
+}
+
+.small-card-image-wrapper {
+  @apply mb-6 h-20;
+}
+
+.small-card-image {
+  @apply w-auto h-auto;
+}
+
+.small-card-title {
+  @apply text-black text-2xl font-bold mb-4;
+}
+
+.small-card-description {
+  @apply text-black text-lg text-blue mb-6 leading-relaxed h-28;
+}

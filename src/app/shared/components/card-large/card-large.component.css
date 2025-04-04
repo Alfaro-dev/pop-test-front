@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@import "../../../../styles.css";
+
+.card-large-wrapper {
+  @apply rounded-2xl p-20;
+}
+
+.card-large-content {
+  @apply flex items-center;
+}
+
+.card-large-image {
+  @apply flex justify-center items-center mr-10;
+}
+
+.card-large-img {
+  @apply max-w-full h-auto;
+}
+
+.card-large-text {
+  @apply flex flex-col justify-between h-full;
+}
+
+.card-large-title {
+  @apply text-blue text-2xl font-bold mb-4;
+}
+
+.card-large-description {
+  @apply text-blue-dark mb-6;
+}
+
+.card-large-link {
+  @apply inline-flex items-center text-blue-light hover:text-blue transition-colors;
+}
+
+.card-large-icon {
+  @apply h-5 w-5 ml-1;
+}

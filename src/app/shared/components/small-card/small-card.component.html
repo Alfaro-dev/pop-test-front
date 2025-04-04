@@ -1,15 +1,15 @@
-<div [ngClass]="containerClass" class="rounded-2xl shadow-none p-8 h-100">
-    <div class="mb-6 h-20">
-      <img [src]="imageUrl" [alt]="imageAlt" class="w-auto h-auto" />
-    </div>
-  
-    <h3 class="text-black text-xl font-bold mb-4">{{ title }}</h3>
-  
-    <p class="text-black mb-6 leading-relaxed h-30" [innerHTML]="description"></p>
-  
-    <app-button
-        [text]="buttonText"
-        [url]="buttonUrl"
-        [buttonClass]="buttonClass"
-    ></app-button>
+<div [ngClass]="containerClass" class="small-card-wrapper">
+  <div class="small-card-image-wrapper">
+    <img [src]="imageUrl" [alt]="imageAlt" class="small-card-image" />
+  </div>
+
+  <h3 class="small-card-title">{{ title }}</h3>
+
+  <p class="small-card-description" [innerHTML]="description"></p>
+
+  <app-button
+    [text]="buttonText"
+    [url]="buttonUrl"
+    [buttonClass]="buttonClass"
+  ></app-button>
 </div>

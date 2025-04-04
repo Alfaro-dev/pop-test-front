@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import "../../../../styles.css";
+
+.splash-overlay {
+  @apply fixed inset-0 bg-gold z-50 flex items-center justify-center;
+}
+
+.splash-logo {
+  @apply w-32 h-32 animate-spin;
+}

@@ -33,6 +33,15 @@ export class ProductsComponent {
       buttonText: 'Obtener',
       buttonLink: '/products/2',
       buttonClass: 'bg-gold text-blue text-xl py-2 px-26 rounded-2xl hover:bg-gold-light',
+    },
+    {
+      header: 'Cheque',
+      title: '¡Solicita tu Depósito a Plazo YA en Línea!',
+      description: '',
+      imageUrl: 'images/deposito-a-plazo-ya.png',
+      buttonText: 'Obtener',
+      buttonLink: '/products/2',
+      buttonClass: 'bg-gold text-blue text-xl py-2 px-26 rounded-2xl hover:bg-gold-light',
     }
   ];
 
